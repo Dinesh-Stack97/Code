@@ -47,25 +47,23 @@ public class Donations {
     
 	@Column(name="Food_Heritage")
     private  String foodAndHeritage;
-	
-	@JoinColumn(name = "temple_id")
-	@OneToOne
-	private Temple temple;
-	
 
 	public Donations(int donationId, String plots, String liveStocks, String groceries, String foundations,
-			String irrigation, Double cash, String onlineDonations, String foodAndHeritage, Temple temple) {
+			String irrigation, Double cash, String onlineDonations, String foodAndHeritage) {
 		super();
 		this.donationId = donationId;
 		this.plots = plots;
 		this.liveStocks = liveStocks;
 		this.groceries = groceries;
-		this.Foundations = foundations;
+		Foundations = foundations;
 		this.irrigation = irrigation;
 		this.cash = cash;
-		this.OnlineDonations = onlineDonations;
+		OnlineDonations = onlineDonations;
 		this.foodAndHeritage = foodAndHeritage;
-		this.temple = temple;
+	}
+
+	public Donations() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getDonationId() {
@@ -139,15 +137,11 @@ public class Donations {
 	public void setFoodAndHeritage(String foodAndHeritage) {
 		this.foodAndHeritage = foodAndHeritage;
 	}
-
-	public Temple getTemple() {
-		return temple;
-	}
-
-	public void setTemple(Temple temple) {
-		this.temple = temple;
-	}
 	
+	
+	
+
+
 
 
 	

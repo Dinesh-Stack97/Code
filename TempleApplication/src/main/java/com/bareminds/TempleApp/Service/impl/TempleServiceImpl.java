@@ -10,6 +10,7 @@ import com.bareminds.TempleApp.Repositery.DonationsRepository;
 import com.bareminds.TempleApp.Repositery.TempleRepository;
 import com.bareminds.TempleApp.Service.Temple_Service;
 import com.bareminds.TempleApp.dto.DonationReaquest;
+import com.bareminds.TempleApp.models.Donations;
 import com.bareminds.TempleApp.models.Temple;
 
 @Service
@@ -34,6 +35,8 @@ public class TempleServiceImpl implements Temple_Service{
 	
 	public Temple SveTemple(DonationReaquest request) {
 		// TODO Auto-generated method stub
+		
+		
 		return templeRepository.save(request.getTemple());
 	}
 
